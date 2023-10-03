@@ -1,0 +1,82 @@
+student@DESKTOP-G915EUD MINGW64 ~
+$ cd desktop
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop
+$ cd DevOps
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps
+$ git init
+Initialized empty Git repository in C:/Users/student/Desktop/DevOps/.git/
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git remote add origin https://github.com/TouheedKhan07/DevOps.git
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git add .
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git commit -m "version1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'student@DESKTOP-G915EUD.(none)')
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git config --global user.email "touheedahmedkhan07@gmail.com"
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git config --global user.name "TouheedKhan07"
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git commit -m "version1"
+[master (root-commit) 1718226] version1
+ 2 files changed, 32 insertions(+)
+ create mode 100644 New Text Document.txt
+ create mode 100644 Tak.java
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$  git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 478 bytes | 478.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/TouheedKhan07/DevOps.git
+ * [new branch]      master -> master
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git log
+commit 1718226e2c0004bd01571cbd1d4660cb9bff374f (HEAD -> master, origin/master)
+Author: TouheedKhan07 <touheedahmedkhan07@gmail.com>
+Date:   Tue Oct 3 15:59:21 2023 +0530
+
+    version1
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+student@DESKTOP-G915EUD MINGW64 ~/desktop/DevOps (master)
+$

@@ -286,3 +286,104 @@ remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
 Receiving objects: 100% (4/4), done.
+
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch1)
+$ nano file1.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch1)
+$ git add .
+warning: adding embedded git repository: P1
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> P1
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached P1
+hint:
+hint: See "git help submodule" for more information.
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch1)
+$ git commit -m "version3"
+[branch1 878515d] version3
+ 2 files changed, 2 insertions(+)
+ create mode 160000 P1
+ create mode 100644 file1.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch1)
+$ git push origin branch1
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 813 bytes | 406.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/TouheedKhan07/P1/pull/new/branch1
+remote:
+To https://github.com/TouheedKhan07/P1.git
+ * [new branch]      branch1 -> branch1
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch1)
+$ git switch master
+warning: unable to rmdir 'P1': Directory not empty
+Switched to branch 'master'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (master)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch2)
+$ nano file2.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch2)
+$ git add .
+warning: adding embedded git repository: P1
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> P1
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached P1
+hint:
+hint: See "git help submodule" for more information.
+warning: in the working copy of 'file2.txt', LF will be replaced by CRLF the next time Git touches it
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch2)
+$ git commit -m "v4"
+[branch2 a733ed7] v4
+ 2 files changed, 2 insertions(+)
+ create mode 160000 P1
+ create mode 100644 file2.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch2)
+$ git push origin branch2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 377 bytes | 377.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/TouheedKhan07/P1/pull/new/branch2
+remote:
+To https://github.com/TouheedKhan07/P1.git
+ * [new branch]      branch2 -> branch2

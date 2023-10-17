@@ -387,3 +387,100 @@ remote:      https://github.com/TouheedKhan07/P1/pull/new/branch2
 remote:
 To https://github.com/TouheedKhan07/P1.git
  * [new branch]      branch2 -> branch2
+
+$ git checkout -b branch 3
+fatal: '3' is not a commit and a branch 'branch' cannot be created from it
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (master)
+$ git checkout -b branch3
+Switched to a new branch 'branch3'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch3)
+$ nano file3.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch3)
+$ git add .
+warning: in the working copy of 'file3.txt', LF will be replaced by CRLF the next time Git touches it
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch3)
+$ git commit -m "version4"
+[branch3 181708e] version4
+ 3 files changed, 5 insertions(+)
+ create mode 100644 file3.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch3)
+$ git push origin branch3
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 691 bytes | 691.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch3' on GitHub by visiting:
+remote:      https://github.com/TouheedKhan07/P1/pull/new/branch3
+remote:
+To https://github.com/TouheedKhan07/P1.git
+ * [new branch]      branch3 -> branch3
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch3)
+$ git switch master
+Switched to branch 'master'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (master)
+$ git checkout -b branch4
+Switched to a new branch 'branch4'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch4)
+$ nano file3.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch4)
+$ git add .
+warning: in the working copy of 'file3.txt', LF will be replaced by CRLF the next time Git touches it
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch4)
+$ git commit -m "version5"
+[branch4 e1f45e4] version5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file3.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch4)
+$ git push origin branch4
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 291.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch4' on GitHub by visiting:
+remote:      https://github.com/TouheedKhan07/P1/pull/new/branch4
+remote:
+To https://github.com/TouheedKhan07/P1.git
+ * [new branch]      branch4 -> branch4
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch4)
+$ git switch master
+Switched to branch 'master'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (master)
+$ git merge branch3
+Updating 15d5f1b..181708e
+Fast-forward
+ file1.txt | 2 ++
+ file2.txt | 2 ++
+ file3.txt | 1 +
+ 3 files changed, 5 insertions(+)
+ create mode 100644 file3.txt
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (master)
+$ git switch branch3
+Switched to branch 'branch3'
+
+Student@m309-28 MINGW64 ~/desktop/DevOps (branch3)
+$ git merge branch4
+Auto-merging file3.txt
+CONFLICT (add/add): Merge conflict in file3.txt
+Automatic merge failed; fix conflicts and then commit the result.
